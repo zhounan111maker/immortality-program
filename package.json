@@ -1,0 +1,35 @@
+{
+  "name": "immortality-program",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "永生计划 · 研究纲领平台 — 可检验的迁移永生研究纲领发布平台",
+  "license": "CC-BY-4.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:only": "vite build",
+    "typecheck": "tsc --noEmit",
+    "verify": "node scripts/verify-migration.mjs",
+    "verify:archive": "node scripts/verify-archive.mjs",
+    "verify:runtime": "node scripts/verify-runtime.mjs",
+    "verify:deploy": "node scripts/verify-deploy.mjs",
+    "verify:live": "node scripts/verify-live.mjs",
+    "verify:all": "node scripts/verify-migration.mjs && node scripts/verify-archive.mjs && node scripts/verify-runtime.mjs && node scripts/verify-deploy.mjs",
+    "preview": "vite preview --port 4173",
+    "icons": "node scripts/make-icons.mjs",
+    "archive": "node scripts/make-archive.mjs"
+  },
+  "devDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "1.2.12",
+    "@types/node": "^26.6.4",
+    "rolldown": "1.2.12",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.2",
+    "vite-plugin-pwa": "^1.3.0",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

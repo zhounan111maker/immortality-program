@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# 研究纲领的全部内容都应当可被检索与引用。
+# 唯一不希望被索引的是归档导出目录：它是同一内容的不同序列化形式，
+# 收录会造成重复内容，但依然允许抓取（Allow，不是 Disallow）。
+Allow: /archive/
+
+# 站点地图由构建期生成
+Sitemap: /sitemap.xml
